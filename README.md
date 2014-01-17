@@ -52,6 +52,15 @@ Useful Commands
 
 1. Server can be started using command ` $OPENSHIFT_HOMEDIR/app-root/runtime/srv/httpd/bin/apachectl start > $OPENSHIFT_DIY_LOG_DIR/server.log 2>&1 &`
 
+To add Append location to path
+------------------------------
+
+Still we will get old php while typing `php --version` on console. To get a new version we need to override the path which is not as simple as it should be.
+
+In short ` rhc env add OPENSHIFT_$UNIQUESTRING_PATH_ELEMENT=value ` will work for you Provided $UNIQUESTRING doesn't conflict with the Cartridge-Short-Name element of any cartridge already in your app's gears, this will result in value being added to the PATH exposed to the various execution contexts (including your SSH sessions).
+
+More details here https://www.openshift.com/forums/openshift/action-hook-path-export-not-sticking  
+
 Thanks
 ------
 
