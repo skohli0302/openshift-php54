@@ -66,14 +66,14 @@ cd php-5.4.24
 --prefix=$OPENSHIFT_RUNTIME_DIR/srv/php/ \
 --with-config-file-path=$OPENSHIFT_RUNTIME_DIR/srv/php/etc/apache2 \
 --with-layout=PHP \
---with-zlib=$OPENSHIFT_RUNTIME_DIR/srv/zlib
+--with-zlib=$OPENSHIFT_RUNTIME_DIR/srv/zlib \
 --with-gd \
 --enable-zip \
 --with-apxs2=$OPENSHIFT_RUNTIME_DIR/srv/httpd/bin/apxs \
 --enable-mbstring \
 --enable-intl \
 --with-icu-dir=$OPENSHIFT_RUNTIME_DIR/srv/icu
-make && make install
+make clean && make && make install
 mkdir $OPENSHIFT_RUNTIME_DIR/srv/php/etc/apache2
 cd ..
 wget http://pecl.php.net/get/APC-3.1.13.tgz
