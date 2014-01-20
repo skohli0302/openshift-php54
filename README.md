@@ -52,8 +52,8 @@ Useful Commands
 
 1. Server can be started using command ` $OPENSHIFT_HOMEDIR/app-root/runtime/srv/httpd/bin/apachectl start > $OPENSHIFT_DIY_LOG_DIR/server.log 2>&1 &`
 
-To add Append location to path
-------------------------------
+To Append new PHP location to System path 
+----------------------------------------
 
 Still we will get old php while typing `php --version` on console. To get a new version we need to override the path which is not as simple as it should be.
 
